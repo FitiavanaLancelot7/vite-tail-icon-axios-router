@@ -1,0 +1,7 @@
+body{
+  background-color: rgb(241, 235, 235);
+}
+#root{
+  display: flex;
+  font-family: 'Poppins';
+}

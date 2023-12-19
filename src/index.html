@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<body>
+    <script>
+        
+
+        
+        const fetchData = async () =>{
+            // with no more variable but just res
+            try{
+                const res = await fetch('data.json').then(res => res.json()).then(res => console.log(res));
+            }catch(error){
+                console.log(error);
+            }
+            // with two variable and using 
+            //await res.json = object
+            // res.json = promise
+
+            try{
+                const res = await fetch('data.json');
+                const data =  res.json();
+                 console.log(data);
+            }catch(error){
+                console.log(error);
+            }
+
+            
+        }
+        fetchData();
+</script>
+</body>
+</html>
